@@ -197,3 +197,7 @@ header > .collapsible-header {
     color: black;
   }
 }
+
+.grayscaled {
+  filter: grayscale(0.7);
+}
