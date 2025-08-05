@@ -1,6 +1,6 @@
 # About
 
-The code in this repo is for the landing page for the U24 Accelerate Basso Study Network Project. It is a simple static site with HTML, JS, and CSS. The CSS is mainly tailwinds classes. It can be hosted on any HTTP server as its starting point is an index.html file.
+The code in this repo is for the landing page for the U24 Accelerate Basso Study Network Project. It is a simple static site with HTML, JS, and CSS. The CSS is mainly tailwinds classes, and it can be hosted on any HTTP server as its starting point is an index.html file.
 
 ## Heritage
 
