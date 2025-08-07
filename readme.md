@@ -4,7 +4,7 @@ The code in this repo is for the landing page for the U24 Accelerate Basso Study
 
 ## Heritage
 
-This site was built from the free [Dev Portfolio Template](https://jamie-dev-portfolio.netlify.app/) created by [Paul Freeman](https://github.com/PaulleDemon). The Usage information below is unchanged from the original template. It is accurate, but running the npm scripts will likely yield errors.
+This site was built from the free [Dev Portfolio Template](https://jamie-dev-portfolio.netlify.app/) created by [Paul Freeman](https://github.com/PaulleDemon). The Usage information below is unchanged from the original template.
 
 - Note that the `css/tailwinds-build.css` file does not cover every class in Tailwinds, just the ones that were used in the original template. This means that attempting to use arbitrary tailwinds classes may not work, and you may need to create custom classes to use functionality that is in the rest of Tailwinds that isn't already included.
 
