@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.tw-fixed {
+  position: fixed;
+}
+
 .tw-absolute {
   position: absolute;
 }
@@ -607,6 +611,11 @@ video {
   margin-right: 1rem;
 }
 
+.tw-my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .tw-mt-10 {
   margin-top: 2.5rem;
 }
@@ -643,16 +652,8 @@ video {
   height: 200px;
 }
 
-.tw-h-\[30px\] {
-  height: 30px;
-}
-
 .tw-h-\[400px\] {
   height: 400px;
-}
-
-.tw-h-\[40px\] {
-  height: 40px;
 }
 
 .tw-h-\[50px\] {
@@ -687,16 +688,8 @@ video {
   min-height: 80vh;
 }
 
-.tw-w-\[30px\] {
-  width: 30px;
-}
-
 .tw-w-\[350px\] {
   width: 350px;
-}
-
-.tw-w-\[40px\] {
-  width: 40px;
 }
 
 .tw-w-full {
@@ -738,10 +731,6 @@ video {
 
 .tw-max-w-\[80\%\] {
   max-width: 80%;
-}
-
-.tw-cursor-pointer {
-  cursor: pointer;
 }
 
 .tw-flex-col {
@@ -824,10 +813,6 @@ video {
   overflow: clip;
 }
 
-.tw-rounded-full {
-  border-radius: 9999px;
-}
-
 .tw-rounded-lg {
   border-radius: 0.5rem;
 }
@@ -845,11 +830,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.tw-bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
 .tw-bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity, 1));
@@ -860,13 +840,13 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.tw-bg-yellow-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 240 138 / var(--tw-bg-opacity, 1));
-}
-
 .tw-bg-opacity-0 {
   --tw-bg-opacity: 0;
+}
+
+.tw-object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .tw-object-cover {
@@ -921,6 +901,14 @@ video {
   padding-left: 1rem;
 }
 
+.tw-pl-8 {
+  padding-left: 2rem;
+}
+
+.tw-pt-4 {
+  padding-top: 1rem;
+}
+
 .tw-text-center {
   text-align: center;
 }
@@ -953,14 +941,14 @@ video {
   line-height: 1;
 }
 
-.tw-text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
 .tw-text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.tw-text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .tw-text-xl {
@@ -1009,9 +997,10 @@ video {
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
 
-.tw-text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+.tw-shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .tw-shadow-xl {
