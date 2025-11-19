@@ -1,0 +1,119 @@
+/* Team Modal Styles */
+.team-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1rem;
+}
+
+.team-modal-overlay.team-modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team-modal {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.team-modal-overlay.team-modal-open .team-modal {
+  transform: scale(1);
+}
+
+.team-modal-content {
+  padding: 2rem;
+}
+
+.team-modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.team-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 2rem;
+  height: 2rem;
+}
+
+.team-modal-close:hover {
+  background-color: #f3f4f6;
+  color: #000;
+}
+
+.team-modal-close:focus {
+  outline: 2px solid #0d0d0d;
+  outline-offset: 2px;
+}
+
+.team-modal-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  padding-right: 2.5rem;
+}
+
+.team-modal-role {
+  font-size: 1rem;
+  color: #595959;
+  margin: 0;
+}
+
+.team-modal-hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+.team-modal-bio {
+  color: #333;
+  line-height: 1.6;
+}
+
+.team-modal-bio p {
+  margin: 0 0 1rem 0;
+}
+
+.team-modal-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Team card focus state for modal interaction */
+.team-card:focus {
+  outline: 2px solid #0d0d0d;
+  outline-offset: 2px;
+}

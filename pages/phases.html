@@ -18,7 +18,8 @@
 
     <!-- <link rel="stylesheet" href="../css/tailwind-runtime.css" /> -->
     <link rel="stylesheet" href="../css/tailwind-build.css" />
-    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/index.css?v=1" />
+    <link rel="stylesheet" href="../css/team-modal.css" />
 
     <link
       rel="stylesheet"
@@ -112,7 +113,7 @@
           </div>
 
           <!-- Resources -->
-          <div class="tw-flex tw-flex-col tw-gap-2 tw-p-4">
+          <div class="tw-flex tw-flex-col tw-gap-4 tw-p-4">
             <div class="tw-flex tw-gap-1">
               <h3 class="tw-text-2xl tw-font-semibold">Resources</h3>
             </div>
@@ -163,55 +164,253 @@
             </div>
           </div>
           <!-- End of Resources -->
-        </div>
 
-        <!-- Publications -->
-        <div class="tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
-          <h3 class="tw-text-4xl tw-bg-green-200 tw-font-semibold tw-uppercase">
-            Publications
-          </h3>
-        </div>
+          <!-- Publications -->
+          <div class="tw-flex tw-flex-col tw-gap-4 tw-p-4">
+            <div class="tw-flex tw-gap-1">
+              <h3 class="tw-text-2xl tw-font-semibold">Publications</h3>
+            </div>
 
-        <div
-          class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-left tw-gap-2 max-lg:tw-flex-col"
-        >
-          <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
-            <p>
-              Beera, D., Bowker, J., Reischer, H.N., Smith, S., Zheng, J., He,
-              Y., Mavrovich, R., Kindya, S., Ravenel, J., Wilson, F., Beverley,
-              J., Duncan, W.D. (2025). Utilizing BERTopic Modeling for Concept
-              Discovery in the Domain of Gerotranscendence and Solitude. Journal
-              of Biomedical Semantics.
-            </p>
+            <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
+              <p>
+                Beera, D., Bowker, J., Reischer, H.N., Smith, S., Zheng, J., He,
+                Y., Mavrovich, R., Kindya, S., Ravenel, J., Wilson, F.,
+                Beverley, J., Duncan, W.D. (2025). Utilizing BERTopic Modeling
+                for Concept Discovery in the Domain of Gerotranscendence and
+                Solitude. Journal of Biomedical Semantics.
+              </p>
+            </div>
+            <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
+              <p>
+                Beera, D., Bowker, J., Reischer, H.N., Smith, S., Zheng, J., He,
+                Y., Mavrovich, R., Kindya, S., Ravenel, J., Wilson, F.,
+                Beverley, J., Duncan, W.D. (2025). Abstract: Applying Topic
+                Modeling Methods to the Promoting Health Aging through Semantic
+                Enrichment of Solitude Research Ontology (PHASES).
+                Bioinformatics Open Source Conference
+              </p>
+            </div>
+            <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
+              <p>
+                Smith, S., Zheng, J., Yeh, F., Beera, D., Beverley, J., Duncan,
+                W.D., He, Y. (2025). Abstract: OntoChimp: A ChatGPT-based
+                Document Analysis Program for Identifying Key Concepts.
+                International Conference on Intelligent Biology and Medicine
+                2025
+              </p>
+            </div>
+            <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
+              <p>
+                Beverley, J., Bowker, J., Reischer, H.N., Mavrovich, R., Hurley,
+                R., Smith, S., Zheng, J., He, Y., Beera, D., Duncan, W.D.
+                (2025). Healthy Aging through Semantic Enrichment. Promoting
+                Healthy Aging through Semantic Enrichment of Solitude Research
+                (PHASES) Workshop
+              </p>
+            </div>
           </div>
-          <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
-            <p>
-              Beera, D., Bowker, J., Reischer, H.N., Smith, S., Zheng, J., He,
-              Y., Mavrovich, R., Kindya, S., Ravenel, J., Wilson, F., Beverley,
-              J., Duncan, W.D. (2025). Abstract: Applying Topic Modeling Methods
-              to the Promoting Health Aging through Semantic Enrichment of
-              Solitude Research Ontology (PHASES). Bioinformatics Open Source
-              Conference
-            </p>
+          <!-- End of Publications -->
+
+          <!-- Team  -->
+          <div class="tw-flex tw-flex-col tw-gap-4 tw-p-4">
+            <div class="tw-flex tw-gap-1">
+              <h3 class="tw-text-2xl tw-font-semibold">Team</h3>
+            </div>
+
+            <div
+              class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-4 tw-w-full tw-pl-4"
+            >
+              <!-- Principal Investigator -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">John Beverly</h4>
+                  <p class="team-card-role">Principal Investigator</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>
+                    John Beverley, PhD, University at Buffalo,
+                    johnbeve@buffalo.edu
+                  </p>
+                  <p>
+                    Assistant Professor at the University at Buffalo and
+                    Co-Director of the National Center for Ontological Research.
+                    He works at the intersection of ontology, formal logic,
+                    machine learning, and knowledge graph engineering, with
+                    applications in infectious diseases, ethics in health, and
+                    applied epistemology.
+                  </p>
+                  <p>
+                    He holds a Ph.D. in Philosophy from Northwestern University
+                    and worked as a senior ontologist at the Johns Hopkins
+                    Applied Physics Laboratory. He has contributed to projects
+                    such as the <i>Infectious Disease Ontology</i> and works on
+                    the Basic Formal Ontology (BFO, ISO/IEC 21838-2).
+                  </p>
+                </div>
+              </div>
+
+              <!-- MPI -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Bill Duncan</h4>
+                  <p class="team-card-role">MPI</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>William Duncan, PhD, University of Florida</p>
+                  <p>
+                    Duncan brings more than 15 years of experience developing
+                    and using biomedical ontologies for health informatics, as
+                    well as computer programming.
+                  </p>
+                  <p>
+                    These ontologies are used to harmonize diverse biomedical
+                    and biological data sources (such as dentistry,
+                    environmental metagenomics, and cancer data), detect
+                    inconsistencies, and gain new insights through the
+                    application of automated reasoning.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Co-Investigator -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Yongqun He</h4>
+                  <p class="team-card-role">Co-Investigator</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>
+                    Yongqun He, PhD, University of Michigan,
+                    yongqunh@med.umich.edu
+                  </p>
+                  <p>
+                    Dr. He is a Professor of Microbiology and Immunology and
+                    Director of He Labs at the University of Michigan,
+                    specializing in ontology development, biomedical
+                    informatics, and vaccine knowledge representation, with
+                    leadership roles in the <i>OBO Foundry</i> and the
+                    <i>Ontology for Biomedical Investigations (OBI)</i>.
+                  </p>
+                  >
+                </div>
+              </div>
+
+              <!-- Co-Investigator -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Julie Bowker</h4>
+                  <p class="team-card-role">Co-Investigator</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>
+                    Julie Bowker, PhD, University at Buffalo,
+                    jcbowker@buffalo.edu
+                  </p>
+                  <p>
+                    Dr. Bowker is a Professor of Psychology at the University at
+                    Buffalo whose research focuses on solitude, peer
+                    relationships, and socioemotional development across the
+                    lifespan, with extensive publications on the psychological
+                    effects of being alone.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Co-Investigator -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Hollen Reischer</h4>
+                  <p class="team-card-role">Co-Investigator</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>
+                    Hollen Reischer, PhD, University at Buffalo,
+                    hollen@buffalo.edu
+                  </p>
+                  <p>
+                    Dr. Reischer is a visiting assistant professor in the
+                    Department of Psychology at the University at Buffalo
+                    specializing in gerotranscendence, positive aging, and the
+                    psychological dimensions of meaning-making and well-being in
+                    later life.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Post-Doc -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Damayanthi Jesudas</h4>
+                  <p class="team-card-role">Post-Doc</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>Damayanthi Jesudas, PhD, University of Florida</p>
+                  <p>
+                    Dr. Jesudas is a Research Assistant Scientist at the
+                    University of Florida with expertise in NLP and data-driven
+                    approaches to ontology development.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Consultant -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Jie Zheng</h4>
+                  <p class="team-card-role">Consultant</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>
+                    Jie Zheng, PhD, University of Michigan, jiezhen@umich.edu
+                  </p>
+                  <p>
+                    Dr. Zheng is a Research Scientist at the University of
+                    Michigan with expertise in bio-ontologies, health
+                    informatics, and semantic web technologies applied to
+                    translational and clinical research.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Consultant -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Sam Smith</h4>
+                  <p class="team-card-role">Consultant</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>Sam Smith, BS, University of Michigan</p>
+                  <p>
+                    Mr. Smith is a research assistant at the University of
+                    Michigan working in biomedical ontology development and
+                    semantic data integration within the <i>He Labs</i> team.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Researcher -->
+              <div class="team-card">
+                <div class="team-card-content">
+                  <h4 class="team-card-name">Regina Hurley</h4>
+                  <p class="team-card-role">Researcher</p>
+                </div>
+                <div class="visually-hidden">
+                  <p>
+                    Regina Hurley, PhD University at Buffalo,
+                    rhurley3@buffalo.edu
+                  </p>
+                  <p>
+                    Dr. Hurley is an Assistant Professor of Philosophy at the
+                    University at Buffalo whose work focuses on epistemology,
+                    applied ontology, and the ethical and conceptual foundations
+                    of data and information systems.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
-            <p>
-              Smith, S., Zheng, J., Yeh, F., Beera, D., Beverley, J., Duncan,
-              W.D., He, Y. (2025). Abstract: OntoChimp: A ChatGPT-based Document
-              Analysis Program for Identifying Key Concepts. International
-              Conference on Intelligent Biology and Medicine 2025
-            </p>
-          </div>
-          <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2 tw-pb-4">
-            <p>
-              Beverley, J., Bowker, J., Reischer, H.N., Mavrovich, R., Hurley,
-              R., Smith, S., Zheng, J., He, Y., Beera, D., Duncan, W.D. (2025).
-              Healthy Aging through Semantic Enrichment. Promoting Healthy Aging
-              through Semantic Enrichment of Solitude Research (PHASES) Workshop
-            </p>
-          </div>
+          <!-- End of Team -->
         </div>
-        <!-- End of Publications -->
       </div>
     </section>
 
@@ -241,4 +440,5 @@
   ></script>
 
   <script src="../index.js"></script>
+  <script src="../js/team-modal.js"></script>
 </html>
