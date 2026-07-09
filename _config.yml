@@ -1,0 +1,6 @@
+# GitHub Pages builds this site with Jekyll, which by default excludes
+# underscore-prefixed paths. The mirrored Resource Portal keeps its build
+# assets in portal/_next, so force-include them.
+include:
+  - "_next"
+  - "portal/_next"
