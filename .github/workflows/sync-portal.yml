@@ -1,0 +1,41 @@
+name: Sync Resource Portal
+
+# Mirrors the deployed portal (https://accelerate-basso.github.io/portal/)
+# into portal/ so it is served from https://accelerate-basso.regenstrief.org/portal/.
+# Runs daily and on demand; commits only when the portal content changed.
+
+on:
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Mirror deployed portal
+        run: python3 scripts/mirror-portal.py
+
+      - name: Commit and push if changed
+        run: |
+          git add -A portal
+          if git diff --cached --quiet; then
+            echo "Portal unchanged; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync portal from accelerate-basso.github.io/portal"
+          git push
+          # Pushes made with GITHUB_TOKEN do not always trigger the Pages
+          # build, so request one explicitly (best effort).
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages/builds" || true
