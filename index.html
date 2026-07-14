@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accelerate Basso</title>
-    <meta name="description" content="" />
+    <title>Accelerate BASSO Network Center</title>
+    <meta
+      name="description"
+      content="The Accelerate BASSO Network Center is the NIA-funded U24 coordinating center for the U01 Network on Accelerating Behavioral and Social Science through Ontology Development and Use."
+    />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Accelerate Basso" />
+    <meta property="og:title" content="Accelerate BASSO Network Center" />
     <meta
       property="og:description"
-      content="The ACCELERATE-BASSO Dissemination and Coordination Center (DCC) will serve as a backbone for the U01 Network on Accelerating Behavioral and Social Science through Ontology Development and Use "
+      content="The ACCELERATE-BASSO Network and Coordination Center serves as a backbone for the U01 Network on Accelerating Behavioral and Social Science through Ontology Development and Use."
     />
     <meta property="og:type" content="website" />
 
-    <!-- <link rel="stylesheet" href="./css/tailwind-runtime.css" /> -->
-    <link rel="stylesheet" href="./css/tailwind-build.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="./css/tailwind-build.css?v=6" />
+    <link rel="stylesheet" href="css/index.css?v=6" />
 
     <link
       rel="stylesheet"
@@ -31,267 +33,339 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white">
     <header
-      class="tw-fixed tw-top-0 tw-z-50 tw-flex tw-h-[60px] tw-w-full tw-bg-white tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around tw-shadow-lg"
+      class="tw-fixed tw-top-0 tw-z-50 tw-w-full tw-bg-white"
+      style="box-shadow: 0 1px 0 var(--basso-hairline)"
     >
-      <a class="tw-text-2xl tw-font-medium tw-my-auto" href="">
-        Accelerate Basso
-      </a>
       <div
-        class="collapsible-header animated-collapse max-lg:tw-shadow-md"
-        id="collapsed-header-items"
+        class="tw-mx-auto tw-flex tw-max-w-[1260px] tw-items-center tw-justify-between tw-px-6 tw-py-3 max-lg:tw-px-4"
       >
+        <a href="./" class="tw-no-underline">
+          <span
+            class="tw-block tw-text-2xl tw-font-semibold tw-leading-tight"
+            style="color: var(--basso-dark)"
+          >
+            Accelerate BASSO
+          </span>
+          <span class="overline tw-block tw-text-[0.7rem]">
+            Network Center
+          </span>
+        </a>
         <div
-          class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+          class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+          id="collapsed-header-items"
         >
-          <a class="header-links" href="#goals"> Goals </a>
-          <a class="header-links" href="#projects"> Projects </a>
-          <a class="header-links" href="pages/contact.html">
-            Coordination Team & EAB Members
-          </a>
-          <a class="header-links" href="/portal/">
-            Resource Portal
-          </a>
+          <div
+            class="tw-flex tw-w-full tw-flex-col tw-items-end tw-gap-2 max-lg:tw-mt-[70px] max-lg:tw-gap-6 max-lg:tw-px-6"
+          >
+            <div class="nav-utility tw-flex max-lg:tw-hidden">
+              <a href="/portal/">
+                <i class="bi bi-box-seam-fill"></i>
+                Resource Portal
+              </a>
+              <a href="pages/contact.html">
+                <i class="bi bi-envelope-fill"></i>
+                Contact
+              </a>
+            </div>
+            <nav
+              class="tw-flex tw-items-center tw-gap-6 max-lg:tw-flex-col max-lg:tw-items-end max-lg:tw-gap-5"
+            >
+              <a class="nav-main-link" href="#overview">About</a>
+              <a class="nav-main-link" href="#goals">Goals</a>
+              <a class="nav-main-link" href="#projects">Projects</a>
+              <a class="nav-main-link" href="#working-groups">
+                Working Groups
+              </a>
+              <a class="nav-main-link" href="pages/contact.html">
+                Team &amp; EAB
+              </a>
+              <a class="nav-main-link lg:tw-hidden" href="/portal/">
+                Resource Portal
+              </a>
+            </nav>
+          </div>
         </div>
-        <div
-          class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
-        ></div>
+        <button
+          class="bi bi-list tw-text-3xl tw-text-black lg:tw-hidden"
+          onclick="toggleHeader()"
+          aria-label="menu"
+          id="collapse-btn"
+        ></button>
       </div>
-      <button
-        class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
-        onclick="toggleHeader()"
-        aria-label="menu"
-        id="collapse-btn"
-      ></button>
     </header>
 
+    <!-- Hero -->
     <section
-      class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]"
+      class="tw-relative tw-w-full tw-overflow-hidden"
+      style="background-color: var(--basso-band)"
     >
       <div
-        class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-6 tw-p-[5%]"
+        class="tw-absolute tw-inset-0 tw-bg-cover tw-bg-center"
+        style="background-image: url('./assets/images/indianapolis-skyline.png')"
+        role="img"
+        aria-label="Indianapolis skyline"
+      ></div>
+      <div
+        class="tw-absolute tw-inset-0"
+        style="
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.88) 45%,
+            rgba(255, 255, 255, 0.45) 100%
+          );"
+      ></div>
+      <div
+        class="tw-relative tw-mx-auto tw-flex tw-min-h-[62vh] tw-w-full tw-max-w-[1260px] tw-items-end tw-px-6 tw-pb-20 tw-pt-[150px] max-lg:tw-px-4"
       >
-        <img
-          src="./assets/images/indianapolis-skyline.png"
-          alt="Indianapolis skyline"
-          class="reveal-hero-img tw-w-full tw-max-w-[650px] tw-rounded-lg tw-shadow-xl max-lg:tw-max-w-full"
-        />
-        <div
-          class="tw-flex tw-flex-col tw-place-content-center tw-place-items-center tw-text-center"
-        >
-          <div
-            class="tw-flex tw-flex-col tw-place-items-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+        <div class="tw-max-w-[660px]">
+          <p class="overline">
+            NIA-funded U24 Coordinating Center &middot; U24AG088019
+          </p>
+          <h1
+            class="tw-mt-3 tw-text-[2.7rem] tw-font-semibold tw-leading-[1.167] tw-text-[#1f1f1f] max-lg:tw-text-[2rem] max-md:tw-text-[1.7rem]"
           >
-            <span class="reveal-hero-text tw-bg-green-200 tw-p-1 tw-px-6">
-              Accelerate Basso
-            </span>
-            <span class="reveal-hero-text tw-text-4xl tw-pt-4">
-              Network Center</span
+            Accelerating Behavioral and Social Science through Ontology
+            Development and Use
+          </h1>
+          <p
+            class="tw-mt-4 tw-text-[1.143rem] tw-leading-[1.5] tw-text-[#1f1f1f] tw-opacity-80"
+          >
+            The Accelerate BASSO Network Center serves as the backbone of the
+            U01 Research Network &mdash; facilitating collaboration, providing
+            ontology-related technical expertise, and sharing the network's
+            resources with the wider research community.
+          </p>
+          <div class="tw-mt-8 tw-flex tw-flex-wrap tw-gap-6">
+            <a class="btn-primary" href="/portal/">
+              Explore the Resource Portal
+            </a>
+            <a class="btn-light" href="#overview">About the Network</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lede -->
+    <section class="tw-w-full">
+      <div class="tw-mx-auto tw-max-w-[880px] tw-px-6 tw-py-14 max-lg:tw-px-4">
+        <p class="lede">
+          The Accelerating <strong>B</strong>eh<strong>a</strong>vioral and
+          <strong>S</strong>ocial <strong>S</strong>cience through
+          <strong>O</strong>ntology (ACCELERATE-BASSO) Network and Coordination
+          Center is a partnership of six institutions building shared,
+          reusable ontology standards for the behavioral and social sciences.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quick actions -->
+    <section class="tw-w-full">
+      <div
+        class="tw-mx-auto tw-grid tw-max-w-[1260px] tw-grid-cols-3 tw-gap-12 tw-px-6 tw-pb-16 max-lg:tw-grid-cols-1 max-lg:tw-px-4"
+      >
+        <div class="tw-flex tw-gap-5">
+          <div>
+            <span class="icon-chip"><i class="bi bi-people-fill"></i></span>
+            <p
+              class="tw-mt-2 tw-text-[1.1rem] tw-font-bold"
+              style="color: var(--basso-primary)"
             >
+              For Network<br />Teams
+            </p>
           </div>
-          <div
-            class="reveal-hero-text tw-mt-4 tw-max-w-[650px] tw-p-2 max-lg:tw-max-w-full"
-          >
-            Serves as a backbone for the U01 Network on Accelerating
-            <strong>B</strong>ehavioral <strong>a</strong>nd
-            <strong>S</strong>ocial <strong>S</strong>cience through
-            <strong>O</strong>ntology Development and Use
+          <ul class="rich-text tw-flex tw-flex-col tw-gap-2 tw-pt-1">
+            <li>
+              <a href="pages/best-practices-wg.html">
+                Best Practices Working Group
+              </a>
+            </li>
+            <li>
+              <a href="pages/resource-sharing-wg.html">
+                Resource Sharing Working Group
+              </a>
+            </li>
+            <li>
+              <a href="pages/contact.html">Coordination Team &amp; EAB</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tw-flex tw-gap-5">
+          <div>
+            <span class="icon-chip"><i class="bi bi-box-seam-fill"></i></span>
+            <p
+              class="tw-mt-2 tw-text-[1.1rem] tw-font-bold"
+              style="color: var(--basso-primary)"
+            >
+              Explore the<br />Resources
+            </p>
           </div>
+          <ul class="rich-text tw-flex tw-flex-col tw-gap-2 tw-pt-1">
+            <li><a href="/portal/">Browse the Resource Portal</a></li>
+            <li>
+              <a href="/portal/resources?type=Ontology">Network ontologies</a>
+            </li>
+            <li><a href="/portal/contribute">Contribute a resource</a></li>
+          </ul>
+        </div>
+        <div class="tw-flex tw-gap-5">
+          <div>
+            <span class="icon-chip"><i class="bi bi-diagram-3-fill"></i></span>
+            <p
+              class="tw-mt-2 tw-text-[1.1rem] tw-font-bold"
+              style="color: var(--basso-dark)"
+            >
+              About the<br />Network
+            </p>
+          </div>
+          <ul class="rich-text tw-flex tw-flex-col tw-gap-2 tw-pt-1">
+            <li><a href="#goals">Goals of the network</a></li>
+            <li><a href="#projects">Projects in the network</a></li>
+            <li>
+              <a
+                href="https://nap.nationalacademies.org/catalog/26755/ontologies-in-the-behavioral-sciences-accelerating-research-and-the-spread-of-knowledge"
+                target="_blank"
+                rel="noopener"
+              >
+                NASEM 2022 report
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-<section
-      class="tw-relative tw-mt-5 tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center tw-p-[2%] max-lg:tw-p-3"
-      id="institutions"
-    >
-      <h3
-        class="reveal-up tw-text-center tw-text-4xl tw-font-semibold max-md:tw-text-2xl"
-      >
-        Partner Institutions
-      </h3>
-      <div
-        class="reveal-up tw-mt-10 tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-place-items-center tw-gap-10 tw-w-full tw-max-w-[80%]"
-      >
+    <!-- Stats -->
+    <section class="tw-w-full" style="background-color: var(--basso-band)">
+      <div class="tw-mx-auto tw-max-w-[880px] tw-px-6 tw-py-16 max-lg:tw-px-4">
+        <h2 class="section-title">The Network at a Glance</h2>
         <div
-          class="tw-flex tw-w-[320px] tw-flex-col tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-2 tw-shadow-xl"
+          class="tw-mt-12 tw-grid tw-grid-cols-3 tw-gap-x-16 tw-gap-y-12 tw-text-center max-md:tw-grid-cols-2 max-md:tw-gap-x-8"
         >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/Regenstrief-Institute.jpg"
-              alt="Indiana University / Regenstrief Institute"
-              class="tw-h-full tw-w-full tw-object-cover"
-            />
+          <div>
+            <i class="bi bi-folder-fill tw-text-3xl" style="color: var(--basso-primary)"></i>
+            <p class="stat-number tw-mt-2">4</p>
+            <p class="stat-label">U01 Projects</p>
+            <p class="stat-sub">across four research domains</p>
           </div>
-          <p
-            class="tw-flex tw-h-[60px] tw-place-content-center tw-place-items-center tw-px-4 tw-text-center tw-text-lg tw-font-semibold"
-          >
-            Indiana University / Regenstrief Institute
-          </p>
-        </div>
-        <div
-          class="tw-flex tw-w-[320px] tw-flex-col tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-2 tw-shadow-xl"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/univ-buffalo.png"
-              alt="University at Buffalo"
-              class="tw-h-full tw-w-full tw-object-cover"
-            />
+          <div>
+            <i class="bi bi-people-fill tw-text-3xl" style="color: var(--basso-primary)"></i>
+            <p class="stat-number tw-mt-2">2</p>
+            <p class="stat-label">Working Groups</p>
+            <p class="stat-sub">best practices &amp; resource sharing</p>
           </div>
-          <p
-            class="tw-flex tw-h-[60px] tw-place-content-center tw-place-items-center tw-px-4 tw-text-center tw-text-lg tw-font-semibold"
-          >
-            University at Buffalo
-          </p>
-        </div>
-        <div
-          class="tw-flex tw-w-[320px] tw-flex-col tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-2 tw-shadow-xl"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/mayo-clinic.jpg"
-              alt="Mayo Clinic"
-              class="tw-h-full tw-w-full tw-object-cover"
-            />
+          <div>
+            <i class="bi bi-buildings-fill tw-text-3xl" style="color: var(--basso-primary)"></i>
+            <p class="stat-number tw-mt-2">6</p>
+            <p class="stat-label">Partner Institutions</p>
+            <p class="stat-sub">across the U.S. and U.K.</p>
           </div>
-          <p
-            class="tw-flex tw-h-[60px] tw-place-content-center tw-place-items-center tw-px-4 tw-text-center tw-text-lg tw-font-semibold"
-          >
-            Mayo Clinic
-          </p>
-        </div>
-        <div
-          class="tw-flex tw-w-[320px] tw-flex-col tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-2 tw-shadow-xl"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/univ-florida.jpg"
-              alt="University of Florida"
-              class="tw-h-full tw-w-full tw-object-cover"
-            />
+          <div>
+            <i class="bi bi-diagram-3-fill tw-text-3xl" style="color: var(--basso-primary)"></i>
+            <p class="stat-number tw-mt-2">9</p>
+            <p class="stat-label">Ontologies</p>
+            <p class="stat-sub">in the Resource Portal</p>
           </div>
-          <p
-            class="tw-flex tw-h-[60px] tw-place-content-center tw-place-items-center tw-px-4 tw-text-center tw-text-lg tw-font-semibold"
-          >
-            University of Florida
-          </p>
-        </div>
-        <div
-          class="tw-flex tw-w-[320px] tw-flex-col tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-2 tw-shadow-xl"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/stanford.jpg"
-              alt="Stanford University"
-              class="tw-h-full tw-w-full tw-object-cover"
-            />
+          <div>
+            <i class="bi bi-journal-text tw-text-3xl" style="color: var(--basso-primary)"></i>
+            <p class="stat-number tw-mt-2">19</p>
+            <p class="stat-label">Publications</p>
+            <p class="stat-sub">catalogued to date</p>
           </div>
-          <p
-            class="tw-flex tw-h-[60px] tw-place-content-center tw-place-items-center tw-px-4 tw-text-center tw-text-lg tw-font-semibold"
-          >
-            Stanford University
-          </p>
-        </div>
-        <div
-          class="tw-flex tw-w-[320px] tw-flex-col tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-2 tw-shadow-xl"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/ucl.jpg"
-              alt="University College London"
-              class="tw-h-full tw-w-full tw-object-cover"
-            />
+          <div>
+            <i class="bi bi-box-seam-fill tw-text-3xl" style="color: var(--basso-primary)"></i>
+            <p class="stat-number tw-mt-2">40</p>
+            <p class="stat-label">Portal Resources</p>
+            <p class="stat-sub">tools, datasets &amp; communities</p>
           </div>
-          <p
-            class="tw-flex tw-h-[60px] tw-place-content-center tw-place-items-center tw-px-4 tw-text-center tw-text-lg tw-font-semibold"
-          >
-            University College London
-          </p>
         </div>
+        <p class="tw-mt-10 tw-text-center tw-text-sm" style="color: var(--basso-caption)">
+          Counts as of July 2026, from the
+          <a href="/portal/" class="tw-underline" style="color: var(--basso-primary)">
+            BASSO Resource Portal
+          </a>
+        </p>
       </div>
     </section>
 
-    <section
-      class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
-      id="overview"
-    >
-      <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
-        <div class="reveal-up tw-flex tw-flex-col tw-gap-3 tw-text-center">
-          <h2 class="tw-text-4xl tw-font-semibold">
-            General description of the network
-          </h2>
-        </div>
-        <div class="reveal-up tw-mt-2 tw-max-w-[60%] max-lg:tw-max-w-full">
-          <p class="tw-text-[#595959]">
+    <!-- Overview -->
+    <section class="tw-w-full" id="overview">
+      <div class="tw-mx-auto tw-max-w-[880px] tw-px-6 tw-py-16 max-lg:tw-px-4">
+        <h2 class="section-title">
+          General Description of the Network
+        </h2>
+        <div class="rich-text tw-mt-8">
+          <p>
             The Accelerating <u>B</u>eh<u>A</u>vioral <u>S</u>ocial
             <u>S</u>cience through <u>O</u>ntology
             (<strong>ACCELERATE-BASSO</strong>) Network and Coordination Center
-            (DCC) will serve
-            as a backbone for the U01 Network and use to (1) facilitate
-            collaboration and cross-project learning; (2) provide
-            ontology-related technical, computational, and informatics expertise
-            and support; (3) facilitate dissemination of resources and training
-            to support ontology expansion, development, and use; and (4) provide
-            active outreach and coordination with relevant stakeholders to
-            increase understanding of and demand for BSSR ontology-related tools
-            and resources.
+            (DCC) will serve as a backbone for the U01 Network and be used to (1)
+            facilitate collaboration and cross-project learning; (2) provide
+            ontology-related technical, computational, and informatics
+            expertise and support; (3) facilitate dissemination of resources
+            and training to support ontology expansion, development, and use;
+            and (4) provide active outreach and coordination with relevant
+            stakeholders to increase understanding of and demand for BSSR
+            ontology-related tools and resources.
           </p>
         </div>
       </div>
     </section>
 
-    <section
-      class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
-      id="goals"
-    >
-      <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
+    <!-- Goals -->
+    <section class="tw-w-full" style="background-color: var(--basso-band)" id="goals">
+      <div class="tw-mx-auto tw-max-w-[1120px] tw-px-6 tw-py-16 max-lg:tw-px-4">
+        <h2 class="section-title">Goals of the Network</h2>
         <div
-          class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+          class="tw-mt-10 tw-grid tw-grid-cols-2 tw-gap-12 max-lg:tw-grid-cols-1"
         >
-          <h2 class="tw-text-4xl tw-font-semibold">Goals of the Network</h2>
-        </div>
-        <div
-          class="tw-mt-6 tw-flex tw-max-w-[60%] tw-flex-wrap tw-place-content-center tw-gap-2 max-lg:tw-flex-col"
-        >
-          <div class="reveal-up tw-flex tw-flex-col tw-gap-2 tw-p-4">
-            <div class="tw-flex tw-gap-1">
-              <h3 class="tw-text-2xl tw-font-semibold">Specific Aims</h3>
-            </div>
-            <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2">
-              <p><strong>1)</strong></p>
-              <p>
-                Provide administrative and logistical support for the U01
-                Research Network.
-              </p>
-            </div>
-            <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2">
-              <p><strong>2)</strong></p>
-              <p>
-                Develop a common technical framework with standard operating
-                procedures (SOPs) to guide the development of BSSR ontologies in
-                the U01 Research Network.
-              </p>
-            </div>
-            <div class="tw-text-[#595959] tw-pl-4 tw-flex tw-gap-2">
-              <p><strong>3)</strong></p>
-              <p>
-                Develop a “toolbox” of resources through which the products of
-                the Network can be shared with and adopted for use, by all the
-                relevant communities.
-              </p>
+          <div>
+            <h3
+              class="tw-text-[1.4rem] tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              Specific Aims
+            </h3>
+            <div class="rich-text tw-mt-4 tw-flex tw-flex-col tw-gap-4">
+              <div class="tw-flex tw-gap-3">
+                <p><strong>1)</strong></p>
+                <p>
+                  Provide administrative and logistical support for the U01
+                  Research Network.
+                </p>
+              </div>
+              <div class="tw-flex tw-gap-3">
+                <p><strong>2)</strong></p>
+                <p>
+                  Develop a common technical framework with standard operating
+                  procedures (SOPs) to guide the development of BSSR ontologies
+                  in the U01 Research Network.
+                </p>
+              </div>
+              <div class="tw-flex tw-gap-3">
+                <p><strong>3)</strong></p>
+                <p>
+                  Develop a &ldquo;toolbox&rdquo; of resources through which
+                  the products of the Network can be shared with and adopted
+                  for use by all the relevant communities.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="reveal-up tw-flex tw-flex-col tw-gap-2 tw-p-4">
-            <div class="tw-flex tw-gap-1">
-              <h3 class="tw-text-2xl tw-font-semibold">Impact</h3>
-            </div>
-            <div class="tw-text-[#595959] tw-pl-4">
+          <div>
+            <h3
+              class="tw-text-[1.4rem] tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              Impact
+            </h3>
+            <div class="rich-text tw-mt-4">
               The success of this DCC will establish a critical infrastructure
               with a reference framework to support BSSR ontology development,
               evaluation, and usage. The DCC will serve as a backbone for the
-              U01 Network and facilitate and successful dissemination of
+              U01 Network and facilitate the successful dissemination of
               findings and sharing of data and knowledge resources generated
               through the Network to the broader scientific community.
             </div>
@@ -300,35 +374,34 @@
       </div>
     </section>
 
-    <section
-      class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
-    >
-      <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
-        <div class="reveal-up tw-mt-6 tw-flex tw-max-w-[60%] tw-gap-10">
-          <div class="tw-w-2/5 tw-flex tw-justify-end">
-            <a
-              href="https://nap.nationalacademies.org/catalog/26755/ontologies-in-the-behavioral-sciences-accelerating-research-and-the-spread-of-knowledge"
-              target="_blank"
-            >
-              <img
-                class="tw-max-w-[300px]"
-                src="./assets/images/national-academies-report-2022.jpg"
-                alt="national-academies-report-2022"
-            /></a>
-          </div>
-          <div class="tw-w-3/5">
-            <p class="tw-pb-4 tw-text-lg">
-              <a
-                href="https://nap.nationalacademies.org/catalog/26755/ontologies-in-the-behavioral-sciences-accelerating-research-and-the-spread-of-knowledge"
-                target="_blank"
-              >
-                <strong
-                  >Ontologies in the Behavioral Sciences: Accelerating Research
-                  and the Spread of Knowledge</strong
-                >
-              </a>
-            </p>
-            <p class="tw-pb-4">
+    <!-- NASEM report -->
+    <section class="tw-w-full">
+      <div
+        class="tw-mx-auto tw-grid tw-max-w-[1120px] tw-grid-cols-[1fr_2fr] tw-items-center tw-gap-12 tw-px-6 tw-py-16 max-lg:tw-grid-cols-1 max-lg:tw-px-4"
+      >
+        <div class="tw-flex tw-justify-center">
+          <a
+            href="https://nap.nationalacademies.org/catalog/26755/ontologies-in-the-behavioral-sciences-accelerating-research-and-the-spread-of-knowledge"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="tw-max-w-[260px]"
+              src="./assets/images/national-academies-report-2022.jpg"
+              alt="Cover of the 2022 National Academies report: Ontologies in the Behavioral Sciences"
+            />
+          </a>
+        </div>
+        <div>
+          <h3
+            class="tw-text-[1.4rem] tw-font-medium tw-leading-snug"
+            style="color: var(--basso-dark)"
+          >
+            Ontologies in the Behavioral Sciences: Accelerating Research and
+            the Spread of Knowledge
+          </h3>
+          <div class="rich-text tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+            <p>
               This report describes how ontologies support science and its
               application to real-world problems.
             </p>
@@ -337,177 +410,367 @@
               engineered to better support the behavioral sciences, and the
               resources needed to sustain their development and use to help
               ensure the maximum benefit from investment in behavioral science
-              research. The full report was published in May, 2022
+              research. The full report was published in May 2022.
+            </p>
+          </div>
+          <a
+            class="btn-link tw-mt-6"
+            href="https://nap.nationalacademies.org/catalog/26755/ontologies-in-the-behavioral-sciences-accelerating-research-and-the-spread-of-knowledge"
+            target="_blank"
+            rel="noopener"
+          >
+            Read the report <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="tw-w-full" style="background-color: var(--basso-band)" id="projects">
+      <div class="tw-mx-auto tw-max-w-[1260px] tw-px-6 tw-py-16 max-lg:tw-px-4">
+        <h2 class="section-title">
+          Projects in the Network
+        </h2>
+        <div
+          class="tw-mt-12 tw-grid tw-grid-cols-4 tw-gap-6 max-lg:tw-grid-cols-2 max-md:tw-grid-cols-1"
+        >
+          <a
+            href="pages/phases.html"
+            class="card-flat tw-flex tw-flex-col tw-overflow-hidden tw-no-underline"
+          >
+            <div class="tw-h-[160px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/solitude_gero.png"
+                alt="PHASES project"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <div class="tw-flex tw-grow tw-flex-col tw-gap-2 tw-p-5">
+              <h3
+                class="tw-text-[1.2rem] tw-font-semibold"
+                style="color: var(--basso-dark)"
+              >
+                PHASES
+              </h3>
+              <p class="tw-text-sm" style="color: var(--basso-caption)">
+                U01AG088074
+              </p>
+              <p class="tw-text-[0.95rem]" style="color: var(--basso-ink)">
+                Promoting Health Aging through Semantic Enrichment of Solitude
+                Research
+              </p>
+              <span class="btn-link tw-mt-auto tw-self-start tw-text-[0.86rem]">
+                Learn more
+              </span>
+            </div>
+          </a>
+          <a
+            href="pages/bso-ad.html"
+            class="card-flat tw-flex tw-flex-col tw-overflow-hidden tw-no-underline"
+          >
+            <div class="tw-h-[160px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/brain-lines.jpg"
+                alt="BSO-AD project"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <div class="tw-flex tw-grow tw-flex-col tw-gap-2 tw-p-5">
+              <h3
+                class="tw-text-[1.2rem] tw-font-semibold"
+                style="color: var(--basso-dark)"
+              >
+                BSO-AD
+              </h3>
+              <p class="tw-text-sm" style="color: var(--basso-caption)">
+                U01AG088076
+              </p>
+              <p class="tw-text-[0.95rem]" style="color: var(--basso-ink)">
+                Standardizing and Harmonizing Behavioral and Social Science
+                Research Factors in Alzheimer's Disease through Ontology-Based
+                Approaches
+              </p>
+              <span class="btn-link tw-mt-auto tw-self-start tw-text-[0.86rem]">
+                Learn more
+              </span>
+            </div>
+          </a>
+          <a
+            href="pages/apricot.html"
+            class="card-flat tw-flex tw-flex-col tw-overflow-hidden tw-no-underline"
+          >
+            <div class="tw-h-[160px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/apricot-logo.png"
+                alt="APRICOT project"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <div class="tw-flex tw-grow tw-flex-col tw-gap-2 tw-p-5">
+              <h3
+                class="tw-text-[1.2rem] tw-font-semibold"
+                style="color: var(--basso-dark)"
+              >
+                APRICOT
+              </h3>
+              <p class="tw-text-sm" style="color: var(--basso-caption)">
+                U01CA291884
+              </p>
+              <p class="tw-text-[0.95rem]" style="color: var(--basso-ink)">
+                Advancing Prevention Research in Cancer through Ontology Tools
+                (The APRICOT Project)
+              </p>
+              <span class="btn-link tw-mt-auto tw-self-start tw-text-[0.86rem]">
+                Learn more
+              </span>
+            </div>
+          </a>
+          <a
+            href="pages/odfa.html"
+            class="card-flat tw-flex tw-flex-col tw-overflow-hidden tw-no-underline"
+          >
+            <div class="tw-h-[160px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/odfa-pic4.png"
+                alt="ODFA project"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <div class="tw-flex tw-grow tw-flex-col tw-gap-2 tw-p-5">
+              <h3
+                class="tw-text-[1.2rem] tw-font-semibold"
+                style="color: var(--basso-dark)"
+              >
+                ODFA
+              </h3>
+              <p class="tw-text-sm" style="color: var(--basso-caption)">
+                U01DE033978
+              </p>
+              <p class="tw-text-[0.95rem]" style="color: var(--basso-ink)">
+                Ontology of Dental care-related Fear, Anxiety, and/or Phobia
+              </p>
+              <span class="btn-link tw-mt-auto tw-self-start tw-text-[0.86rem]">
+                Learn more
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working groups -->
+    <section class="tw-w-full" id="working-groups">
+      <div class="tw-mx-auto tw-max-w-[1120px] tw-px-6 tw-py-16 max-lg:tw-px-4">
+        <h2 class="section-title">Working Groups</h2>
+        <div
+          class="tw-mt-10 tw-grid tw-grid-cols-2 tw-gap-8 max-md:tw-grid-cols-1"
+        >
+          <a
+            href="pages/best-practices-wg.html"
+            class="card-flat tw-flex tw-gap-5 tw-p-6 tw-no-underline"
+          >
+            <span class="icon-chip tw-shrink-0">
+              <i class="bi bi-clipboard-check-fill"></i>
+            </span>
+            <div>
+              <h3
+                class="tw-text-[1.2rem] tw-font-semibold"
+                style="color: var(--basso-dark)"
+              >
+                Best Practices Working Group
+              </h3>
+              <p class="tw-mt-2 tw-text-[0.95rem]" style="color: var(--basso-ink)">
+                Minimal ontology development guidelines, a white paper on
+                ontology interoperability, and the Hootation evaluation tool.
+              </p>
+              <span class="btn-link tw-mt-4 tw-text-[0.86rem]">Learn more</span>
+            </div>
+          </a>
+          <a
+            href="pages/resource-sharing-wg.html"
+            class="card-flat tw-flex tw-gap-5 tw-p-6 tw-no-underline"
+          >
+            <span class="icon-chip tw-shrink-0">
+              <i class="bi bi-share-fill"></i>
+            </span>
+            <div>
+              <h3
+                class="tw-text-[1.2rem] tw-font-semibold"
+                style="color: var(--basso-dark)"
+              >
+                Resource Sharing Working Group
+              </h3>
+              <p class="tw-mt-2 tw-text-[0.95rem]" style="color: var(--basso-ink)">
+                Resource-sharing policy and procedures, the FAIR study portal,
+                and training materials and educational activities.
+              </p>
+              <span class="btn-link tw-mt-4 tw-text-[0.86rem]">Learn more</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner institutions -->
+    <section class="tw-w-full" style="background-color: var(--basso-band)" id="institutions">
+      <div class="tw-mx-auto tw-max-w-[1260px] tw-px-6 tw-py-16 max-lg:tw-px-4">
+        <h2 class="section-title">Partner Institutions</h2>
+        <div
+          class="tw-mt-12 tw-grid tw-grid-cols-3 tw-gap-8 max-lg:tw-grid-cols-2 max-md:tw-grid-cols-1"
+        >
+          <div class="card-flat tw-overflow-hidden">
+            <div class="tw-h-[180px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/Regenstrief-Institute.jpg"
+                alt="Indiana University / Regenstrief Institute"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <p
+              class="tw-p-4 tw-text-center tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              Indiana University / Regenstrief Institute
+            </p>
+          </div>
+          <div class="card-flat tw-overflow-hidden">
+            <div class="tw-h-[180px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/univ-buffalo.png"
+                alt="University at Buffalo"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <p
+              class="tw-p-4 tw-text-center tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              University at Buffalo
+            </p>
+          </div>
+          <div class="card-flat tw-overflow-hidden">
+            <div class="tw-h-[180px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/mayo-clinic.jpg"
+                alt="Mayo Clinic"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <p
+              class="tw-p-4 tw-text-center tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              Mayo Clinic
+            </p>
+          </div>
+          <div class="card-flat tw-overflow-hidden">
+            <div class="tw-h-[180px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/univ-florida.jpg"
+                alt="University of Florida"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <p
+              class="tw-p-4 tw-text-center tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              University of Florida
+            </p>
+          </div>
+          <div class="card-flat tw-overflow-hidden">
+            <div class="tw-h-[180px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/stanford.jpg"
+                alt="Stanford University"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <p
+              class="tw-p-4 tw-text-center tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              Stanford University
+            </p>
+          </div>
+          <div class="card-flat tw-overflow-hidden">
+            <div class="tw-h-[180px] tw-w-full tw-overflow-hidden">
+              <img
+                src="./assets/images/ucl.jpg"
+                alt="University College London"
+                class="tw-h-full tw-w-full tw-object-cover"
+              />
+            </div>
+            <p
+              class="tw-p-4 tw-text-center tw-font-medium"
+              style="color: var(--basso-dark)"
+            >
+              University College London
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section
-      class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%] max-lg:tw-p-3"
-    >
-      <h3
-        id="projects"
-        class="reveal-up tw-text-center tw-text-4xl tw-font-semibold max-md:tw-text-2xl"
-      >
-        Projects in the Network
-      </h3>
-      <!-- projects -->
+    <!-- CTA band -->
+    <section class="tw-w-full" style="background-color: var(--basso-dark)">
       <div
-        class="reveal-up tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-10 max-lg:tw-flex-col"
+        class="tw-mx-auto tw-flex tw-max-w-[880px] tw-flex-col tw-items-center tw-gap-6 tw-px-6 tw-py-20 tw-text-center max-lg:tw-px-4"
       >
-        <a
-          href="pages/phases.html"
-          class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/solitude_gero.png"
-              alt="solitude-gero"
-              class="tw-h-full tw-w-full tw-object-cover"
-              srcset=""
-            />
-          </div>
-          <h3 class="tw-text-2xl tw-font-semibold max-md:tw-text-xl">
-            PHASES - U01AG088074
-          </h3>
-          <p class="tw-mt-2 tw-text-gray-600">
-            Promoting Health Aging through Semantic Enrichment of Solitude
-            Research
-          </p>
-          <span>
-            <span>Learn more</span>
-            <i class="bi bi-arrow-right"></i>
-          </span>
-        </a>
-        <a
-          href="pages/bso-ad.html"
-          class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/brain-lines.jpg"
-              alt="article image"
-              class="tw-h-full tw-w-full tw-object-cover"
-              srcset=""
-            />
-          </div>
-          <h3 class="tw-text-2xl tw-font-semibold max-md:tw-text-xl">
-            BSO-AD - U01AG088076
-          </h3>
-          <p class="tw-mt-2 tw-text-gray-600">
-            Standardizing and Harmonizing Behavioral and Social Science Research
-            Factors in Alzheimer's Disease through Ontology-Based Approaches
-          </p>
-          <span>
-            <span>Learn more</span>
-            <i class="bi bi-arrow-right"></i>
-          </span>
-        </a>
-        <a
-          href="pages/apricot.html"
-          class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/apricot-logo.png"
-              alt="bcio-upper-level-structure"
-              class="tw-h-full tw-w-full tw-object-cover"
-              srcset=""
-            />
-          </div>
-          <h3 class="tw-text-2xl tw-font-semibold max-md:tw-text-xl">
-            APRICOT - U01CA291884
-          </h3>
-          <p class="tw-mt-2 tw-text-gray-600">
-            Advancing Prevention Research in Cancer through Ontology Tools (The
-            APRICOT Project)
-          </p>
-          <span>
-            <span>Learn more</span>
-            <i class="bi bi-arrow-right"></i>
-          </span>
-        </a>
-        <a
-          href="pages/odfa.html"
-          class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/odfa-pic4.png"
-              alt="odfa-pic4"
-              class="tw-h-full tw-w-full tw-object-cover"
-              srcset=""
-            />
-          </div>
-          <h3 class="tw-text-2xl tw-font-semibold max-md:tw-text-xl">
-            ODFA - U01DE033978
-          </h3>
-          <p class="tw-mt-2 tw-text-gray-600">
-            Ontology of Dental care-related Fear, Anxiety, and/or Phobia
-          </p>
-          <span>
-            <span>Learn more</span>
-            <i class="bi bi-arrow-right"></i>
-          </span>
-        </a>
-      </div>
-    </section>
-
-    <section
-      class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
-      id="working-groups"
-    >
-      <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
-        <div
-          class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
-        >
-          <h2 class="tw-text-4xl tw-font-semibold">Working Groups</h2>
-        </div>
-        <div
-          class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-center tw-gap-2 max-lg:tw-flex-col"
-        >
-          <div class="reveal-up tw-flex tw-flex-col tw-gap-2 tw-p-4">
-            <div
-              class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-4 tw-w-full tw-pl-4"
-            >
-              <a
-                href="pages/best-practices-wg.html"
-                target="_blank"
-                class="team-card tw-text-center tw-no-underline tw-text-black hover:tw-text-black"
-              >
-                <div class="team-card-content">
-                  Best Practices Working Group
-                </div>
-              </a>
-              <a
-                href="pages/resource-sharing-wg.html"
-                target="_blank"
-                class="team-card tw-text-center tw-no-underline tw-text-black hover:tw-text-black"
-              >
-                <div class="team-card-content">
-                  Resource Sharing Working Group
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <hr class="tw-mt-4" />
-
-    <footer
-      id="contact"
-      class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
-    >
-      <div class="tw-flex tw-gap-6 tw-text-2xl">
-        <p class="tw-text-sm">
-          Funding: Supported by the National Institute of Aging (NIA)
-          U24AG088019
+        <h2 class="tw-text-[2.2rem] tw-font-normal tw-leading-[1.3] tw-text-white max-lg:tw-text-[1.6rem]">
+          Explore what the network has produced
+        </h2>
+        <p class="tw-max-w-[560px] tw-text-[1.05rem] tw-text-white tw-opacity-80">
+          Ontologies, publications, tools, and communities for the behavioral
+          and social sciences &mdash; catalogued in one place.
         </p>
+        <a class="btn-light" href="/portal/">Visit the Resource Portal</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer-main tw-mt-auto tw-w-full">
+      <div
+        class="tw-mx-auto tw-grid tw-max-w-[1260px] tw-grid-cols-3 tw-gap-10 tw-px-6 tw-py-14 max-lg:tw-grid-cols-1 max-lg:tw-px-4"
+      >
+        <div>
+          <p class="tw-text-xl tw-font-semibold">Accelerate BASSO</p>
+          <p class="tw-mt-1 tw-text-[0.8rem] tw-uppercase tw-tracking-[0.14em] tw-opacity-80">
+            Network Center
+          </p>
+          <p class="tw-mt-4 tw-text-[0.9rem] tw-leading-relaxed tw-opacity-90">
+            Supported by the National Institute on Aging (NIA), part of the
+            National Institutes of Health (NIH), under award U24AG088019.
+          </p>
+        </div>
+        <div>
+          <p class="tw-mb-3 tw-font-semibold">Explore</p>
+          <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[0.95rem]">
+            <li><a href="#goals">Goals of the Network</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#working-groups">Working Groups</a></li>
+            <li><a href="pages/contact.html">Coordination Team &amp; EAB</a></li>
+            <li><a href="/portal/">Resource Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="tw-mb-3 tw-font-semibold">Connect</p>
+          <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[0.95rem]">
+            <li><a href="pages/contact.html">Contact the coordination team</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div
+          class="tw-mx-auto tw-flex tw-max-w-[1260px] tw-items-center tw-justify-between tw-gap-4 tw-px-6 tw-py-5 tw-text-[0.9rem] max-md:tw-flex-col max-lg:tw-px-4"
+        >
+          <p>&copy; 2026 Accelerate BASSO Network Center</p>
+          <ul class="tw-flex tw-gap-5">
+            <li><a href="./">Home</a></li>
+            <li><a href="/portal/">Resource Portal</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

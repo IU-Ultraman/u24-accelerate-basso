@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 :root {
   --btn-color: #fdfdfd; /* button color*/
   --btn-bg: #0d0d0d; /* button bg color*/
@@ -8,11 +6,29 @@
   --header-link-hover: #dddcdccf;
   --footer-link-hover: #6dbb00;
   --input-focus-bd-color: #0d0d0d;
+
+  /* NACC-modeled design tokens, using NACC's blue palette */
+  --basso-primary: #0158b2; /* buttons, links, h3 accents */
+  --basso-dark: #05305a; /* section h2, nav links, footer, hover bg */
+  --basso-link-hover: #096fd9;
+  --basso-band: #edf6ff; /* light band / hero fallback */
+  --basso-ribbon: #cfe6ff; /* utility ribbon, light buttons */
+  --basso-bottom-bar: #c5d9ed; /* footer bottom bar */
+  --basso-hairline: #b2c5d8; /* hairline borders */
+  --basso-accent: #f5bc25; /* tertiary link underline (NACC yellow) */
+  --basso-ink: #363636; /* body text */
+  --basso-ink-dark: #183159; /* stat numbers */
+  --basso-caption: #546e7a; /* captions, award numbers */
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+}
+
+[id] {
+  scroll-margin-top: 112px;
 }
 
 header {
@@ -235,6 +251,216 @@ header > .collapsible-header {
 .team-card-role {
   font-size: 0.875rem;
   color: #595959;
+}
+
+/* ---------- NACC-modeled components (BASSO green theme) ---------- */
+
+.nav-utility {
+  background-color: var(--basso-ribbon);
+}
+
+.nav-utility a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.4rem 1rem 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #111111;
+  border-left: 1px solid #111111;
+  text-decoration: none;
+}
+
+.nav-utility a:first-child {
+  border-left: none;
+}
+
+.nav-utility a:hover {
+  text-decoration: underline;
+}
+
+.nav-main-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--basso-dark);
+  text-decoration: none;
+  padding: 6px 2px;
+  min-width: fit-content;
+}
+
+.nav-main-link:hover {
+  text-decoration: underline;
+  color: var(--basso-dark);
+}
+
+.btn-primary,
+.btn-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  min-width: 180px;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.75;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background-color: var(--basso-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--basso-dark);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn-light {
+  background-color: var(--basso-ribbon);
+  color: #111111;
+}
+
+.btn-light:hover {
+  background-color: var(--basso-bottom-bar);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basso-primary);
+  border-bottom: 2px solid var(--basso-accent);
+}
+
+.btn-link:hover {
+  color: var(--basso-dark);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--basso-dark);
+  text-align: center;
+}
+
+.lede {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--basso-ink);
+  text-align: center;
+}
+
+.overline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--basso-primary);
+}
+
+.rich-text {
+  font-size: 1.143rem;
+  line-height: 1.5;
+  color: var(--basso-ink);
+}
+
+.rich-text a {
+  color: var(--basso-primary);
+  text-decoration: underline;
+}
+
+.rich-text a:hover {
+  color: var(--basso-link-hover);
+  text-decoration: none;
+}
+
+.card-flat {
+  background-color: #fff;
+  border: 1px solid var(--basso-hairline);
+  border-radius: 4px;
+  transition: box-shadow 250ms ease, border-color 250ms ease;
+}
+
+a.card-flat:hover {
+  border-color: var(--basso-primary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  background-color: var(--basso-band);
+  color: var(--basso-primary);
+  font-size: 2rem;
+}
+
+.stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--basso-ink-dark);
+}
+
+.stat-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--basso-primary);
+}
+
+.stat-sub {
+  font-size: 0.9rem;
+  color: var(--basso-ink);
+}
+
+.footer-main {
+  background-color: var(--basso-dark);
+  color: #fff;
+}
+
+.footer-main a {
+  color: var(--basso-bottom-bar);
+  text-decoration: none;
+}
+
+.footer-main a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: var(--basso-bottom-bar);
+  color: var(--basso-ink);
+}
+
+.footer-bottom a {
+  color: var(--basso-ink);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 /* Visually hidden content for screen readers */

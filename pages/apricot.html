@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accelerate Basso | APRICOT</title>
-    <meta name="description" content="" />
+    <title>APRICOT | Accelerate BASSO Network Center</title>
+    <meta
+      name="description"
+      content="APRICOT (Advancing Prevention Research in Cancer through Ontology Tools) extends the Behaviour Change Intervention Ontology and its tools within the Accelerate BASSO Network Center."
+    />
     <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="U01CA291884  - APRICOT" />
+    <meta property="og:title" content="U01CA291884 - APRICOT" />
     <meta
       property="og:description"
       content="Advancing Prevention Research in Cancer through Ontology Tools (The APRICOT Project)"
@@ -19,8 +22,8 @@
     <!-- <meta property="og:image" content="" /> -->
 
     <!-- <link rel="stylesheet" href="../css/tailwind-runtime.css" /> -->
-    <link rel="stylesheet" href="../css/tailwind-build.css" />
-    <link rel="stylesheet" href="../css/index.css?v=1" />
+    <link rel="stylesheet" href="../css/tailwind-build.css?v=6" />
+    <link rel="stylesheet" href="../css/index.css?v=6" />
     <link rel="stylesheet" href="../css/team-modal.css" />
 
     <link
@@ -35,32 +38,85 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white">
     <header
-      class="tw-absolute tw-top-0 tw-z-20 tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 tw-flex"
-    >
-      <a
-        class="tw-flex tw-h-[50px] tw-p-[4px] tw-text-xl tw-font-medium tw-items-center"
-        href="../index.html"
-      >
-        <span>
-          <i class="bi bi-arrow-left"></i>
-          <span>Home</span>
-        </span>
-      </a>
-    </header>
-
-    <section
-      class="tw-flex tw-min-h-[80vh] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+      class="tw-fixed tw-top-0 tw-z-50 tw-w-full tw-bg-white"
+      style="box-shadow: 0 1px 0 var(--basso-hairline)"
     >
       <div
-        class="tw-mt-8 tw-max-w-4xl tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+        class="tw-mx-auto tw-flex tw-max-w-[1260px] tw-items-center tw-justify-between tw-px-6 tw-py-3 max-lg:tw-px-4"
       >
-        <div class="tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
-          <h2 class="tw-text-6xl tw-bg-green-200 tw-font-semibold tw-uppercase">
-            APRICOT
-          </h2>
+        <a href="../index.html" class="tw-no-underline">
+          <span
+            class="tw-block tw-text-2xl tw-font-semibold tw-leading-tight"
+            style="color: var(--basso-dark)"
+          >
+            Accelerate BASSO
+          </span>
+          <span class="overline tw-block tw-text-[0.7rem]">
+            Network Center
+          </span>
+        </a>
+        <div
+          class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+          id="collapsed-header-items"
+        >
+          <div
+            class="tw-flex tw-w-full tw-flex-col tw-items-end tw-gap-2 max-lg:tw-mt-[70px] max-lg:tw-gap-6 max-lg:tw-px-6"
+          >
+            <div class="nav-utility tw-flex max-lg:tw-hidden">
+              <a href="/portal/">
+                <i class="bi bi-box-seam-fill"></i>
+                Resource Portal
+              </a>
+              <a href="contact.html">
+                <i class="bi bi-envelope-fill"></i>
+                Contact
+              </a>
+            </div>
+            <nav
+              class="tw-flex tw-items-center tw-gap-6 max-lg:tw-flex-col max-lg:tw-items-end max-lg:tw-gap-5"
+            >
+              <a class="nav-main-link" href="../index.html#overview">About</a>
+              <a class="nav-main-link" href="../index.html#goals">Goals</a>
+              <a class="nav-main-link" href="../index.html#projects">Projects</a>
+              <a class="nav-main-link" href="../index.html#working-groups">
+                Working Groups
+              </a>
+              <a class="nav-main-link" href="contact.html">Team &amp; EAB</a>
+              <a class="nav-main-link lg:tw-hidden" href="/portal/">
+                Resource Portal
+              </a>
+            </nav>
+          </div>
         </div>
+        <button
+          class="bi bi-list tw-text-3xl tw-text-black lg:tw-hidden"
+          onclick="toggleHeader()"
+          aria-label="menu"
+          id="collapse-btn"
+        ></button>
+      </div>
+    </header>
+
+    <section class="tw-w-full" style="background-color: var(--basso-band)">
+      <div
+        class="tw-mx-auto tw-max-w-[1120px] tw-px-6 tw-pt-[130px] tw-pb-12 max-lg:tw-px-4"
+      >
+        <p class="overline">Accelerate BASSO Network Center</p>
+        <h1
+          class="tw-mt-2 tw-text-[2.4rem] tw-font-semibold tw-leading-tight max-md:tw-text-[1.8rem]"
+          style="color: var(--basso-dark)"
+        >
+          APRICOT
+        </h1>
+      </div>
+    </section>
+
+    <section class="tw-w-full tw-overflow-hidden">
+      <div
+        class="tw-mx-auto tw-max-w-[1120px] tw-px-6 tw-py-12 max-lg:tw-px-4"
+      >
         <div
           class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-left tw-gap-2 max-lg:tw-flex-col"
         >
@@ -298,7 +354,7 @@
               <div class="tw-flex tw-gap-2">
                 <p><strong>5.</strong></p>
                 <p>
-                  Create a global community of practice (CoP)- a collaborative
+                  Create a global community of practice (CoP) - a collaborative
                   network dedicated to fostering knowledge sharing, co-creation,
                   and innovation in support of APRICOT tools and resources. The
                   CoP aims to:
@@ -461,9 +517,9 @@
                   <p>
                     Professor Michie developed the Behaviour Change Wheel
                     framework and leads the Human Behaviour Change Project and
-                    as several policy-related responsibilities such as in her
-                    roles as co-Director of Director of Behavioural Research UK,
-                    and UCL's Centre for Behaviour Change.
+                    has several policy-related responsibilities such as in her
+                    roles as co-Director of Behavioural Research UK, and
+                    Director of UCL's Centre for Behaviour Change.
                   </p>
                 </div>
               </div>
@@ -593,9 +649,9 @@
                     m.johnston@abdn.ac.uk
                   </p>
                   <p>
-                    Prof Johnson is a Fellow of the Royal Society of Edinburgh,
+                    Prof Johnston is a Fellow of the Royal Society of Edinburgh,
                     the Academy of Medical Sciences, the Academy of Learned
-                    Societies for the Social Sciences the Royal College of
+                    Societies for the Social Sciences, the Royal College of
                     Physicians of Edinburgh and Honorary Fellow of the British
                     Psychological Society, European Health Psychology Society
                     and the Health Psychology and Public Health Network.
@@ -635,7 +691,7 @@
                     to promote healthy behavior.
                   </p>
                   <p>
-                    Working across a broad array of health domains, has
+                    Working across a broad array of health domains, he has
                     contributed to our understanding of a range of issues
                     including why and when different health communication
                     strategies are most effective, the decision processes that
@@ -683,7 +739,7 @@
                 </div>
                 <div class="visually-hidden">
                   <p>
-                    Colbie Reid, PhD, Medical College of Wisconsin, United
+                    Colbie Reed, PhD, Medical College of Wisconsin, United
                     States of America, creed@mcw.edu
                   </p>
                   <p>
@@ -805,7 +861,7 @@
         </div>
 
         <div class="tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
-          <h3 class="tw-text-4xl tw-bg-green-200 tw-font-semibold tw-uppercase">
+          <h3 class="section-title tw-text-left" style="color: var(--basso-dark)">
             Publications
           </h3>
         </div>
@@ -986,15 +1042,49 @@
       </div>
     </section>
 
-    <hr class="tw-mt-4" />
-
-    <footer
-      id="contact"
-      class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
-    >
-      <p class="tw-text-sm">
-        Funding: Supported by the National Institute of Aging (NIA) U24AG088019
-      </p>
+    <footer class="footer-main tw-mt-auto tw-w-full">
+      <div
+        class="tw-mx-auto tw-grid tw-max-w-[1260px] tw-grid-cols-3 tw-gap-10 tw-px-6 tw-py-14 max-lg:tw-grid-cols-1 max-lg:tw-px-4"
+      >
+        <div>
+          <p class="tw-text-xl tw-font-semibold">Accelerate BASSO</p>
+          <p class="tw-mt-1 tw-text-[0.8rem] tw-uppercase tw-tracking-[0.14em] tw-opacity-80">
+            Network Center
+          </p>
+          <p class="tw-mt-4 tw-text-[0.9rem] tw-leading-relaxed tw-opacity-90">
+            Supported by the National Institute on Aging (NIA), part of the
+            National Institutes of Health (NIH), under award U24AG088019.
+          </p>
+        </div>
+        <div>
+          <p class="tw-mb-3 tw-font-semibold">Explore</p>
+          <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[0.95rem]">
+            <li><a href="../index.html#goals">Goals of the Network</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#working-groups">Working Groups</a></li>
+            <li><a href="contact.html">Coordination Team &amp; EAB</a></li>
+            <li><a href="/portal/">Resource Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="tw-mb-3 tw-font-semibold">Connect</p>
+          <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[0.95rem]">
+            <li><a href="contact.html">Contact the coordination team</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div
+          class="tw-mx-auto tw-flex tw-max-w-[1260px] tw-items-center tw-justify-between tw-gap-4 tw-px-6 tw-py-5 tw-text-[0.9rem] max-md:tw-flex-col max-lg:tw-px-4"
+        >
+          <p>&copy; 2026 Accelerate BASSO Network Center</p>
+          <ul class="tw-flex tw-gap-5">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/portal/">Resource Portal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 

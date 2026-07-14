@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accelerate Basso | PHASES</title>
-    <meta name="description" content="" />
+    <title>PHASES | Accelerate BASSO Network Center</title>
+    <meta
+      name="description"
+      content="PHASES (Promoting Healthy Aging through Semantic Enrichment of Solitude Research) develops interoperable ontologies bridging solitude and gerotranscendence research within the Accelerate BASSO Network Center."
+    />
     <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
 
     <!-- Open Graph / Facebook -->
@@ -17,8 +20,8 @@
     <meta property="og:image" content="" />
 
     <!-- <link rel="stylesheet" href="../css/tailwind-runtime.css" /> -->
-    <link rel="stylesheet" href="../css/tailwind-build.css" />
-    <link rel="stylesheet" href="../css/index.css?v=1" />
+    <link rel="stylesheet" href="../css/tailwind-build.css?v=6" />
+    <link rel="stylesheet" href="../css/index.css?v=6" />
     <link rel="stylesheet" href="../css/team-modal.css" />
 
     <link
@@ -33,35 +36,85 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white">
     <header
-      class="tw-absolute tw-top-0 tw-z-20 tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 tw-flex"
-    >
-      <a
-        class="tw-flex tw-h-[50px] tw-p-[4px] tw-text-xl tw-font-medium tw-items-center"
-        href="../index.html"
-      >
-        <span>
-          <i class="bi bi-arrow-left"></i>
-          <span>Home</span>
-        </span>
-      </a>
-    </header>
-
-    <section
-      class="tw-flex tw-min-h-[80vh] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+      class="tw-fixed tw-top-0 tw-z-50 tw-w-full tw-bg-white"
+      style="box-shadow: 0 1px 0 var(--basso-hairline)"
     >
       <div
-        class="tw-mt-8 tw-max-w-4xl tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+        class="tw-mx-auto tw-flex tw-max-w-[1260px] tw-items-center tw-justify-between tw-px-6 tw-py-3 max-lg:tw-px-4"
       >
-        <div class="tw-mt-5 tw-flex tw-flex-col tw-gap-3">
-          <h2 class="tw-text-6xl tw-bg-green-200 tw-font-semibold tw-uppercase">
-            PHASES
-          </h2>
-        </div>
+        <a href="../index.html" class="tw-no-underline">
+          <span
+            class="tw-block tw-text-2xl tw-font-semibold tw-leading-tight"
+            style="color: var(--basso-dark)"
+          >
+            Accelerate BASSO
+          </span>
+          <span class="overline tw-block tw-text-[0.7rem]">
+            Network Center
+          </span>
+        </a>
         <div
-          class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-left tw-gap-2 max-lg:tw-flex-col"
+          class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+          id="collapsed-header-items"
         >
+          <div
+            class="tw-flex tw-w-full tw-flex-col tw-items-end tw-gap-2 max-lg:tw-mt-[70px] max-lg:tw-gap-6 max-lg:tw-px-6"
+          >
+            <div class="nav-utility tw-flex max-lg:tw-hidden">
+              <a href="/portal/">
+                <i class="bi bi-box-seam-fill"></i>
+                Resource Portal
+              </a>
+              <a href="contact.html">
+                <i class="bi bi-envelope-fill"></i>
+                Contact
+              </a>
+            </div>
+            <nav
+              class="tw-flex tw-items-center tw-gap-6 max-lg:tw-flex-col max-lg:tw-items-end max-lg:tw-gap-5"
+            >
+              <a class="nav-main-link" href="../index.html#overview">About</a>
+              <a class="nav-main-link" href="../index.html#goals">Goals</a>
+              <a class="nav-main-link" href="../index.html#projects">Projects</a>
+              <a class="nav-main-link" href="../index.html#working-groups">
+                Working Groups
+              </a>
+              <a class="nav-main-link" href="contact.html">Team &amp; EAB</a>
+              <a class="nav-main-link lg:tw-hidden" href="/portal/">
+                Resource Portal
+              </a>
+            </nav>
+          </div>
+        </div>
+        <button
+          class="bi bi-list tw-text-3xl tw-text-black lg:tw-hidden"
+          onclick="toggleHeader()"
+          aria-label="menu"
+          id="collapse-btn"
+        ></button>
+      </div>
+    </header>
+
+    <section class="tw-w-full" style="background-color: var(--basso-band)">
+      <div
+        class="tw-mx-auto tw-max-w-[1120px] tw-px-6 tw-pt-[130px] tw-pb-12 max-lg:tw-px-4"
+      >
+        <p class="overline">Accelerate BASSO Network Center</p>
+        <h1
+          class="tw-mt-2 tw-text-[2.4rem] tw-font-semibold tw-leading-tight max-md:tw-text-[1.8rem]"
+          style="color: var(--basso-dark)"
+        >
+          PHASES
+        </h1>
+      </div>
+    </section>
+
+    <section class="tw-w-full tw-overflow-hidden">
+      <div
+        class="tw-mx-auto tw-max-w-[1120px] tw-px-6 tw-py-12 max-lg:tw-px-4"
+      >
           <h3 class="tw-text-2xl tw-font-semibold tw-text-center">
             Promoting Health Aging through Semantic Enrichment of Solitude
             Research
@@ -267,7 +320,7 @@
                     applied epistemology.
                   </p>
                   <p>
-                    He holds a Ph.D. in Philosophy from Northwestern University
+                    He holds a PhD in Philosophy from Northwestern University
                     and worked as a senior ontologist at the Johns Hopkins
                     Applied Physics Laboratory. He has contributed to projects
                     such as the <i>Infectious Disease Ontology</i> and works on
@@ -318,7 +371,6 @@
                     leadership roles in the <i>OBO Foundry</i> and the
                     <i>Ontology for Biomedical Investigations (OBI)</i>.
                   </p>
-                  >
                 </div>
               </div>
 
@@ -355,7 +407,7 @@
                     hollen@buffalo.edu
                   </p>
                   <p>
-                    Dr. Reischer is a visiting assistant professor in the
+                    Dr. Reischer is a Visiting Assistant Professor in the
                     Department of Psychology at the University at Buffalo
                     specializing in gerotranscendence, positive aging, and the
                     psychological dimensions of meaning-making and well-being in
@@ -423,7 +475,7 @@
                 </div>
                 <div class="visually-hidden">
                   <p>
-                    Regina Hurley, PhD University at Buffalo,
+                    Regina Hurley, PhD, University at Buffalo,
                     rhurley3@buffalo.edu
                   </p>
                   <p>
@@ -438,18 +490,51 @@
           </div>
           <!-- End of Team -->
         </div>
-      </div>
     </section>
 
-    <hr class="tw-mt-4" />
-
-    <footer
-      id="contact"
-      class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
-    >
-      <p class="tw-text-sm">
-        Funding: Supported by the National Institute of Aging (NIA) U24AG088019
-      </p>
+    <footer class="footer-main tw-mt-auto tw-w-full">
+      <div
+        class="tw-mx-auto tw-grid tw-max-w-[1260px] tw-grid-cols-3 tw-gap-10 tw-px-6 tw-py-14 max-lg:tw-grid-cols-1 max-lg:tw-px-4"
+      >
+        <div>
+          <p class="tw-text-xl tw-font-semibold">Accelerate BASSO</p>
+          <p class="tw-mt-1 tw-text-[0.8rem] tw-uppercase tw-tracking-[0.14em] tw-opacity-80">
+            Network Center
+          </p>
+          <p class="tw-mt-4 tw-text-[0.9rem] tw-leading-relaxed tw-opacity-90">
+            Supported by the National Institute on Aging (NIA), part of the
+            National Institutes of Health (NIH), under award U24AG088019.
+          </p>
+        </div>
+        <div>
+          <p class="tw-mb-3 tw-font-semibold">Explore</p>
+          <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[0.95rem]">
+            <li><a href="../index.html#goals">Goals of the Network</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#working-groups">Working Groups</a></li>
+            <li><a href="contact.html">Coordination Team &amp; EAB</a></li>
+            <li><a href="/portal/">Resource Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="tw-mb-3 tw-font-semibold">Connect</p>
+          <ul class="tw-flex tw-flex-col tw-gap-2 tw-text-[0.95rem]">
+            <li><a href="contact.html">Contact the coordination team</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div
+          class="tw-mx-auto tw-flex tw-max-w-[1260px] tw-items-center tw-justify-between tw-gap-4 tw-px-6 tw-py-5 tw-text-[0.9rem] max-md:tw-flex-col max-lg:tw-px-4"
+        >
+          <p>&copy; 2026 Accelerate BASSO Network Center</p>
+          <ul class="tw-flex tw-gap-5">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/portal/">Resource Portal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 
