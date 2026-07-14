@@ -416,20 +416,20 @@ a.card-flat:hover {
 }
 
 .stat-number {
-  font-size: 2.4rem;
+  font-size: 3.25rem;
   font-weight: 800;
   line-height: 1.1;
   color: var(--basso-ink-dark);
 }
 
 .stat-label {
-  font-size: 1.05rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--basso-primary);
 }
 
 .stat-sub {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--basso-ink);
 }
 
