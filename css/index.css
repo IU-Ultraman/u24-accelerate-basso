@@ -221,6 +221,9 @@ header > .collapsible-header {
 /* Team card styles */
 .team-card {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
   background-color: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
@@ -228,6 +231,30 @@ header > .collapsible-header {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   cursor: pointer;
+}
+
+/* Headshot, or an initials disc when no photo has been supplied. Both are the
+   same size so cards keep a common height whether or not a photo exists. */
+.team-card-photo {
+  flex: 0 0 auto;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  background-color: var(--basso-band);
+}
+
+.team-card-photo--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--basso-dark);
+  background-color: var(--basso-ribbon);
+  user-select: none;
 }
 
 .team-card:hover {
@@ -238,8 +265,9 @@ header > .collapsible-header {
 
 .team-card-content {
   display: flex;
+  min-width: 0;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .team-card-name {
@@ -292,6 +320,60 @@ header > .collapsible-header {
 .nav-main-link:hover {
   text-decoration: underline;
   color: var(--basso-dark);
+}
+
+/* Seven main-nav items with long labels ("External Advisory Board",
+   "Coordinating Center") do not fit beside the wordmark at the narrow end of
+   the desktop range, so tighten spacing and type there and relax it as the
+   viewport grows. Measured against a 202px wordmark and a 976px content box
+   at the 1024px breakpoint. */
+header > div > a {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  /* nowrap belongs to the single-row desktop nav only. Below this breakpoint
+     the same links sit in the narrow drawer, which clips rather than scrolls,
+     so "External Advisory Board" must be allowed to wrap there. */
+  .nav-main-link {
+    white-space: nowrap;
+  }
+
+  header nav.tw-flex {
+    gap: 0.7rem;
+    /* The header clips its overflow, so without this a reader using a large
+       default font size would lose the last tabs entirely. Wrapping to a
+       second right-aligned row is the graceful failure. */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 0.35rem;
+  }
+
+  .nav-main-link {
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  header nav.tw-flex {
+    gap: 1rem;
+  }
+
+  .nav-main-link {
+    font-size: 0.92rem;
+  }
+}
+
+@media (min-width: 1360px) {
+  header nav.tw-flex {
+    gap: 1.5rem;
+  }
+
+  .nav-main-link {
+    font-size: 0.95rem;
+  }
 }
 
 .btn-primary,

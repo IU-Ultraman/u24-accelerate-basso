@@ -10,8 +10,10 @@ class TeamModal {
     this.modalName = null;
     this.modalRole = null;
     this.modalBio = null;
+    this.modalPhoto = null;
     this.closeBtn = null;
     this.overlay = null;
+    this.lastFocused = null;
     this.init();
   }
 
@@ -49,6 +51,16 @@ class TeamModal {
     const modalHeader = document.createElement("div");
     modalHeader.className = "team-modal-header";
 
+    // Headshot slot. Replaced per card in open(): an <img> when the card has a
+    // photo, an initials disc when it does not.
+    this.modalPhoto = document.createElement("span");
+    this.modalPhoto.className = "team-modal-photo team-modal-photo--initials";
+    this.modalPhoto.setAttribute("aria-hidden", "true");
+
+    // Name and role stack beside the headshot
+    const modalHeaderText = document.createElement("div");
+    modalHeaderText.className = "team-modal-header-text";
+
     // Create name element
     this.modalName = document.createElement("h2");
     this.modalName.className = "team-modal-name";
@@ -58,8 +70,11 @@ class TeamModal {
     this.modalRole = document.createElement("p");
     this.modalRole.className = "team-modal-role";
 
-    modalHeader.appendChild(this.modalName);
-    modalHeader.appendChild(this.modalRole);
+    modalHeaderText.appendChild(this.modalName);
+    modalHeaderText.appendChild(this.modalRole);
+
+    modalHeader.appendChild(this.modalPhoto);
+    modalHeader.appendChild(modalHeaderText);
     modalHeader.appendChild(this.closeBtn);
 
     // Create HR separator
@@ -153,6 +168,7 @@ class TeamModal {
     this.modalName.textContent = name;
     this.modalRole.textContent = role;
     this.modalBio.innerHTML = bioHTML;
+    this.setPhoto(card, name);
 
     // Show HR only if there's bio content
     if (bioHTML.trim().length > 0) {
@@ -166,8 +182,60 @@ class TeamModal {
     this.overlay.classList.add("team-modal-open");
     document.body.style.overflow = "hidden"; // Prevent body scroll
 
-    // Focus management
-    this.closeBtn.focus();
+    // Focus management: remember the opener so close() can restore focus.
+    this.lastFocused = card;
+    this.focusCloseButton();
+  }
+
+  /**
+   * Move focus into the dialog. Tried synchronously, then retried on the next
+   * task: the overlay animates in from visibility:hidden, and a click's own
+   * default action can focus the card afterwards, either of which would leave
+   * focus outside the dialog.
+   */
+  focusCloseButton() {
+    const attempt = () => {
+      if (!this.isOpen()) return true;
+      this.closeBtn.focus();
+      return document.activeElement === this.closeBtn;
+    };
+    if (attempt()) return;
+    setTimeout(attempt, 0);
+  }
+
+  /**
+   * Show the card's headshot at modal size, or an initials disc when the card
+   * has no photo. Swaps the element so an <img> is never left with no src.
+   */
+  setPhoto(card, name) {
+    const cardImg = card.querySelector("img.team-card-photo");
+    let next;
+
+    if (cardImg && cardImg.getAttribute("src")) {
+      next = document.createElement("img");
+      next.className = "team-modal-photo";
+      next.src = cardImg.getAttribute("src");
+      next.alt = "";
+      next.width = 96;
+      next.height = 96;
+    } else {
+      next = document.createElement("span");
+      next.className = "team-modal-photo team-modal-photo--initials";
+      next.textContent = this.initialsFor(name);
+    }
+    next.setAttribute("aria-hidden", "true");
+
+    this.modalPhoto.replaceWith(next);
+    this.modalPhoto = next;
+  }
+
+  /** First letters of the first and last name parts, e.g. "Susan Michie" -> "SM". */
+  initialsFor(name) {
+    const parts = name.split(/\s+/).filter((w) => /[A-Za-z]/.test(w));
+    if (!parts.length) return "";
+    const first = parts[0][0];
+    const last = parts.length > 1 ? parts[parts.length - 1][0] : "";
+    return (first + last).toUpperCase();
   }
 
   close() {
@@ -175,11 +243,13 @@ class TeamModal {
     this.overlay.classList.remove("team-modal-open");
     document.body.style.overflow = ""; // Restore body scroll
 
-    // Return focus to the card that opened the modal
-    const activeCard = document.querySelector(".team-card:focus");
-    if (activeCard) {
-      activeCard.focus();
+    // Return focus to the card that opened the modal. Looking for
+    // ".team-card:focus" here never matched, because open() had already moved
+    // focus to the close button, so the opener is recorded instead.
+    if (this.lastFocused && document.contains(this.lastFocused)) {
+      this.lastFocused.focus();
     }
+    this.lastFocused = null;
   }
 
   isOpen() {
