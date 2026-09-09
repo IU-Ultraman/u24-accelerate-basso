@@ -1,1 +1,15 @@
 node_modules
+.DS_Store
+
+# Photo originals from the project teams. These are camera and press files
+# (one headshot is 10 MB), and everything in this repo is published by GitHub
+# Pages, so they are kept locally rather than committed. scripts/build-photos.py
+# derives the web copies the site actually loads:
+#   assets/images/team/      square headshots, <= 400px
+#   assets/images/meetings/  meeting photos, <= 1800px wide
+# Re-run it after adding or replacing an original.
+/assets/APRICOT Team photos/
+/assets/BSO-AD/
+/assets/ODFA/
+/assets/July 11 2025.jpg
+/assets/July 17 2026.jpg
