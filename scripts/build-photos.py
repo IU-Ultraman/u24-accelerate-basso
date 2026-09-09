@@ -53,7 +53,7 @@ HEADSHOTS = {
     "BSO-AD/Yue Yu.jpg": "Yue Yu",
     "BSO-AD/Weiguo Cao.png": "Weiguo Cao",
     "BSO-AD/Rakesh Kumar.jpg": "Rakesh Kumar",
-    "BSO-AD/Issac H. Clark.jpg": "Issac H. Clark",
+    "BSO-AD/Issac H. Clark.jpg": "Isaac H. Clark",  # supplied file misspells "Isaac"
     "BSO-AD/Xing He.jpg": "Xing He",
     "BSO-AD/Xuguang Ai.jpg": "Xuguang Ai",
     "BSO-AD/Yuhang Jiang.jpg": "Yuhang Jiang",
