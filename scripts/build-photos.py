@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Build web-ready team headshots and meeting photos from the originals.
 
-Originals live in assets/APRICOT Team photos/, assets/BSO-AD/, assets/ODFA/ and
-assets/July*.jpg. They are camera/press originals (some over 10 MB), so they are
-not committed or deployed; this script derives the small, uniform files the site
-actually loads:
+Originals live in assets/APRICOT Team photos/, assets/BSO-AD/, assets/ODFA/,
+assets/PHASES/ and assets/July*.jpg. They are camera/press originals (some over
+10 MB), so they are not committed or deployed; this script derives the small,
+uniform files the site actually loads:
 
     assets/images/team/<slug>.jpg        400x400, square, JPEG q82
     assets/images/meetings/<date>.jpg    max 1800px wide, JPEG q78
@@ -12,7 +12,9 @@ actually loads:
 Headshots are cropped to a square whose side is the short edge of the original,
 centred horizontally and biased toward the top (faces sit above centre in a
 headshot). FOCUS_OVERRIDES nudges the crop for photos where the subject is not
-centred. Re-run after adding originals:
+centred. SLIDE_CROPS first reapplies a crop someone already chose for a photo,
+for originals that were pulled out of a slide deck. Re-run after adding
+originals:
 
     python3 scripts/build-photos.py
 """
@@ -58,7 +60,8 @@ HEADSHOTS = {
     "BSO-AD/Xuguang Ai.jpg": "Xuguang Ai",
     "BSO-AD/Yuhang Jiang.jpg": "Yuhang Jiang",
     # --- ODFA ------------------------------------------------------------
-    "ODFA/duncan headshot.jpg": "Bill Duncan",
+    # Bill Duncan's headshot comes from the PHASES slide below: it is the same
+    # photograph as "ODFA/duncan headshot.jpg" at 486px instead of 278px.
     "ODFA/McNeil_Daniel_W._Headshot_2024.jpg": "Dan McNeil",
     "ODFA/Olga Ensz Head Shot.jpg": "Olga Ensz",
     "ODFA/Astha Singhal.jpg": "Astha Singhal",
@@ -67,6 +70,20 @@ HEADSHOTS = {
     "ODFA/Corinne-Huggins-Manley- professional pic.jpeg": "Corinne Huggins-Manley",
     "ODFA/Finn Wilson.jpg": "Finn Wilson",
     "ODFA/Michelle Cooper.jpg": "Michelle Cooper",
+    # --- PHASES ----------------------------------------------------------
+    # Extracted from the PHASES team's headshot slide ("PHASES headshots.pptx",
+    # one slide, each photo captioned with the person's name). Files are named
+    # by the slide caption; the value is the name on the site's team card.
+    "PHASES/John Beverley.png": "John Beverley",
+    "PHASES/Bill Duncan.png": "Bill Duncan",
+    "PHASES/Oliver He.png": "Yongqun He",  # "Oliver" is Yongqun He's English name
+    "PHASES/Julie Bowker.png": "Julie Bowker",
+    "PHASES/Hollen Reischer.png": "Hollen Reischer",
+    "PHASES/Damayanthi Jesudas.png": "Damayanthi Jesudas",
+    "PHASES/Jie Zheng.png": "Jie Zheng",
+    "PHASES/Regina Hurley.jpg": "Regina Hurley",
+    "PHASES/Maxime Jublou.jpg": "Maxime Jublou",
+    "PHASES/Jeremy Ravenel.png": "Jeremy Ravenel",
 }
 
 # Headshots supplied for people who do not appear on any team roster on the site.
@@ -79,6 +96,15 @@ FOCUS_OVERRIDES = {
     "corinne-huggins-manley": (0.10, 0.12),  # landscape frame, subject left of centre
 }
 DEFAULT_FOCUS = (0.5, 0.12)
+
+# slug -> (left, top, right, bottom) fractions trimmed off the original before
+# the square crop. These are the crops the slide author applied in PowerPoint
+# (<a:srcRect> on the picture), copied exactly so the photo is framed the way
+# its owner chose rather than from the raw, uncropped file.
+SLIDE_CROPS = {
+    "regina-hurley": (0.16673, 0.22475, 0.16068, 0.0),  # raw file is mostly library
+    "julie-bowker": (0.0, 0.0, 0.0, 0.17756),
+}
 
 MEETINGS = {
     "July 11 2025.jpg": "2025-07-11",
@@ -105,6 +131,12 @@ def load_rgb(path):
     return im.convert("RGB")
 
 
+def trim(im, fractions):
+    l, t, r, b = fractions
+    w, h = im.size
+    return im.crop((round(w * l), round(h * t), round(w * (1 - r)), round(h * (1 - b))))
+
+
 def square_crop(im, focus):
     w, h = im.size
     side = min(w, h)
@@ -116,6 +148,11 @@ def square_crop(im, focus):
 
 def build_headshots():
     OUT_TEAM.mkdir(parents=True, exist_ok=True)
+    # Two originals for one person would silently overwrite each other.
+    slugs = [slugify(p) for p in HEADSHOTS.values()]
+    dupes = sorted({x for x in slugs if slugs.count(x) > 1})
+    if dupes:
+        raise SystemExit(f"more than one original maps to: {', '.join(dupes)}")
     built, missing = [], []
     for rel, person in sorted(HEADSHOTS.items(), key=lambda kv: kv[1]):
         src = ASSETS / rel
@@ -125,6 +162,8 @@ def build_headshots():
         slug = slugify(person)
         im = load_rgb(src)
         orig = im.size
+        if slug in SLIDE_CROPS:
+            im = trim(im, SLIDE_CROPS[slug])
         im = square_crop(im, FOCUS_OVERRIDES.get(slug, DEFAULT_FOCUS))
         # Small originals are common here; upscaling them to a uniform 400px
         # only invents blur, so clamp the target to the source's own size with
